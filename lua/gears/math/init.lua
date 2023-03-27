@@ -1,8 +1,14 @@
+---@diagnostic disable: missing-return, duplicate-set-field
+
+--- @module 'gears.math'
+local gm
+
 --- ### Description
 --- Math module for gears.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.math.html)
-local GMath = {}
+--- @class GMath
+local GMath = gm
 
 --- ### Description
 --- Return all subsets of a specific set. This function, giving a set, will return all subset it.
@@ -14,7 +20,7 @@ local GMath = {}
 --- @return table result A table with all subset.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.math.html#subsets)
-GMath.subsets = function(set) end
+function GMath.subsets(set) end
 
 --- ### Description
 --- Make i cycle.
@@ -25,7 +31,7 @@ GMath.subsets = function(set) end
 --- @return integer | nil result An integer in `(1, t)` or `nil` if `t` is less than or equal to zero.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.math.html#cycle)
-GMath.cycle = function(t, i) end
+function GMath.cycle(t, i) end
 
 --- ### Description
 --- Round a number to an integer.
@@ -35,7 +41,7 @@ GMath.cycle = function(t, i) end
 --- @return integer result Undocumented!
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.math.html#round)
-GMath.round = function(x) end
+function GMath.round(x) end
 
 --- ### Description
 --- Return the sign of the number `x`.
@@ -45,6 +51,6 @@ GMath.round = function(x) end
 --- @return integer result Return `1` if `x` is positive, `-1` if negative and `0` if `x` is `0`.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.math.html#sign)
-GMath.sign = function(x) end
+function GMath.sign(x) end
 
 return GMath

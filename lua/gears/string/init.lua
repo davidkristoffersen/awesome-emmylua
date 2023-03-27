@@ -1,7 +1,10 @@
+---@diagnostic disable: missing-return, duplicate-set-field
+
 --- ### Description
 --- String module for gears.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.string.html)
+--- @class GString
 local GString = {}
 
 --- ### Description
@@ -12,7 +15,7 @@ local GString = {}
 --- @return string result Escaped text.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.string.html#xml_escape)
-GString.xml_escape = function(text) end
+function GString.xml_escape(text) end
 
 --- ### Description
 --- Unescape a string from entities.
@@ -22,7 +25,7 @@ GString.xml_escape = function(text) end
 --- @return string result Unescaped text.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.string.html#xml_unescape)
-GString.xml_unescape = function(text) end
+function GString.xml_unescape(text) end
 
 --- ### Description
 --- Count number of lines in a string.
@@ -32,7 +35,7 @@ GString.xml_unescape = function(text) end
 --- @return integer result Number of lines.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.string.html#linecount)
-GString.linecount = function(text) end
+function GString.linecount(text) end
 
 --- ### Description
 --- Split a string into multiple lines.
@@ -44,7 +47,7 @@ GString.linecount = function(text) end
 --- @return string result The string with lines wrapped to width.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.string.html#linewrap)
-GString.linewrap = function(text, width, indent) end
+function GString.linewrap(text, width, indent) end
 
 --- ### Description
 --- Escape all special pattern-matching characters so that lua interprets them literally instead of as a character class.
@@ -54,7 +57,7 @@ GString.linewrap = function(text, width, indent) end
 --- @return string result String with escaped characters.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.string.html#quote_pattern)
-GString.quote_pattern = function(str) end
+function GString.quote_pattern(str) end
 
 --- ### Description
 --- Generate a pattern matching expression that ignores case.
@@ -62,7 +65,7 @@ GString.quote_pattern = function(str) end
 --- @param query string Original pattern matching expression.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.string.html#query_to_pattern)
-GString.query_to_pattern = function(query) end
+function GString.query_to_pattern(query) end
 
 --- ### Description
 --- Split separates a string containing a delimiter into the list of substrings between that delimiter.
@@ -73,7 +76,7 @@ GString.query_to_pattern = function(query) end
 --- @return string[] result List of the substrings.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.string.html#split)
-GString.split = function(str, delimiter) end
+function GString.split(str, delimiter) end
 
 --- ### Description
 --- Check if a string starts with another string.
@@ -84,7 +87,7 @@ GString.split = function(str, delimiter) end
 --- @return boolean result `true` if string starts with specified string.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.string.html#startswith)
-GString.startswith = function(str, sub) end
+function GString.startswith(str, sub) end
 
 --- ### Description
 --- Check if a string ends with another string.
@@ -95,6 +98,6 @@ GString.startswith = function(str, sub) end
 --- @return boolean result `true` if string ends with specified string.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.string.html#endswith)
-GString.endswith = function(str, sub) end
+function GString.endswith(str, sub) end
 
 return GString

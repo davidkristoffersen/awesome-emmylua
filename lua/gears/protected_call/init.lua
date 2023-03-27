@@ -7,7 +7,7 @@
 --- [See all contributors on GitHub](https://github.com/awesomeWM/awesome/graphs/contributors)
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.protected_call.html)
---- @module "gears.protected_call"
+--- @class GProtected_call
 local GSafety = {}
 
 --- ### Description
@@ -21,6 +21,6 @@ local GSafety = {}
 --- @return any result The result of the given function, or nothing if an error occurred.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.protected_call.html#gears.protected_call)
-GSafety.protected_call = function(func, ...) end
+function GSafety.protected_call(func, ...) end
 
 return GSafety

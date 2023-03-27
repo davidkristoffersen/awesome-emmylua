@@ -1,3 +1,6 @@
+--- @module 'gears.color'
+local gc
+
 --- ### Description
 --- This module simplifies the creation of cairo pattern objects.
 ---
@@ -41,6 +44,7 @@
 --- [See all contributors on GitHub](https://github.com/awesomeWM/awesome/graphs/contributors)
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.color.html)
-local GColour = {}
+--- @class GColor
+local GColour = gc
 
 return GColour

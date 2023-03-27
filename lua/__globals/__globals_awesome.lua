@@ -1,3 +1,5 @@
+---@diagnostic disable: missing-return
+
 --- ### Description
 --- AwesomeWM lifecycle API.
 ---
@@ -11,7 +13,7 @@
 --- - **Copyright**: 2008-2009 Julien Danjou
 --- - **Originally authored by**: Julien Danjou <julien@danjou.info>
 --- @diagnostic disable-next-line: lowercase-global
---- @class AwesomeAPI : Object
+--- @class AwesomeAPI : GObjectObj
 --- @field version AwesomeAPIPropertyVersion The AwesomeWM version.
 --- @field release AwesomeAPIPropertyRelease The AwesomeWM release name.
 --- @field api_level AwesomeAPIPropertyAPILevel The AwesomeWM API level.

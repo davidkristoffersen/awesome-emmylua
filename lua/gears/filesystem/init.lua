@@ -1,8 +1,14 @@
+--- @diagnostic disable: missing-return, duplicate-set-field
+
+--- @module 'gears.filesystem'
+local gf
+
 --- ### Description
 --- Filesystem module for `gears`.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html)
-local GFS = {}
+--- @class GFilesystem
+local GFS = gf
 
 --- ### Description
 --- Create a directory, including all missing parent directories.
@@ -12,7 +18,7 @@ local GFS = {}
 --- @return boolean success, nil | string result Returns true and null if successful, otherwise false and error.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#make_directories)
-GFS.make_directories = function(directory) end
+function GFS.make_directories(directory) end
 
 --- ### Description
 ---  Create all parent directories for a given path.
@@ -22,7 +28,7 @@ GFS.make_directories = function(directory) end
 --- @return boolean success, nil | string result Returns true and null if successful, otherwise false and error.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#make_parent_directories)
-GFS.make_parent_directories = function(path) end
+function GFS.make_parent_directories(path) end
 
 --- ### Description
 --- Check if a file exists, is readable and not a directory.
@@ -32,7 +38,7 @@ GFS.make_parent_directories = function(path) end
 --- @return boolean result Returns true if the file exists and is readable.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#file_readable)
-GFS.file_readable = function(filename) end
+function GFS.file_readable(filename) end
 
 --- ### Description
 --- Check if a file exists, is executable and not a directory.
@@ -42,7 +48,7 @@ GFS.file_readable = function(filename) end
 --- @return boolean result Returns true if the file exists and is executable.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#file_executable)
-GFS.file_executable = function(filename) end
+function GFS.file_executable(filename) end
 
 --- ### Description
 --- Check if a path exists, is readable and a directory.
@@ -52,7 +58,7 @@ GFS.file_executable = function(filename) end
 --- @return boolean result Returns true if the directory exists and is readable.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#dir_readable)
-GFS.dir_readable = function(path) end
+function GFS.dir_readable(path) end
 
 --- ### Description
 --- Check if a path is a directory.
@@ -62,7 +68,7 @@ GFS.dir_readable = function(path) end
 --- @return boolean result Returns true if the directory exists and is readable.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#is_dir)
-GFS.is_dir = function(path) end
+function GFS.is_dir(path) end
 
 --- ### Description
 --- Get the path of the configuration folder located in the user's home folder.
@@ -70,7 +76,7 @@ GFS.is_dir = function(path) end
 --- @return string result Returns the configuration folder path with a slash at the end.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#get_xdg_config_home)
-GFS.get_xdg_config_home = function() end
+function GFS.get_xdg_config_home() end
 
 --- ### Description
 --- Get the path of the cache folder located in the user's home folder.
@@ -78,7 +84,7 @@ GFS.get_xdg_config_home = function() end
 --- @return string result Returns the cache folder path with a slash at the end.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#get_xdg_cache_home)
-GFS.get_xdg_cache_home = function() end
+function GFS.get_xdg_cache_home() end
 
 --- ### Description
 --- Get the path of the data folder located in the user's home folder.
@@ -86,7 +92,7 @@ GFS.get_xdg_cache_home = function() end
 --- @return string result Returns the data folder path with a slash at the end.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#get_xdg_data_home)
-GFS.get_xdg_data_home = function() end
+function GFS.get_xdg_data_home() end
 
 --- ### Description
 --- Get the list of data directories located in the system folder.
@@ -94,7 +100,7 @@ GFS.get_xdg_data_home = function() end
 --- @return string[] result Returns the list of data directories.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#get_xdg_data_dirs)
-GFS.get_xdg_data_dirs = function() end
+function GFS.get_xdg_data_dirs() end
 
 --- ### Description
 --- Get the folder containing the AwesomeWM configuration, this is usually located in `$HOME/.config/awesome`.
@@ -102,7 +108,7 @@ GFS.get_xdg_data_dirs = function() end
 --- @return string result Returns the folder containing the AwesomeWM configuration.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#get_configuration_dir)
-GFS.get_configuration_dir = function() end
+function GFS.get_configuration_dir() end
 
 --- ### Description
 --- Get the path to a directory that should be used to cache data.
@@ -110,7 +116,7 @@ GFS.get_configuration_dir = function() end
 --- @return string result The requested path string with a trailing slash.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#get_cache_dir)
-GFS.get_cache_dir = function() end
+function GFS.get_cache_dir() end
 
 --- ### Description
 --- Get the path to the directory where the themes are installed.
@@ -118,7 +124,7 @@ GFS.get_cache_dir = function() end
 --- @return string result The requested path string with a trailing slash.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#get_themes_dir)
-GFS.get_themes_dir = function() end
+function GFS.get_themes_dir() end
 
 --- ### Description
 --- Get the path to the directory where our icons are installed.
@@ -126,7 +132,7 @@ GFS.get_themes_dir = function() end
 --- @return string result The requested path string with a trailing slash.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#get_awesome_icon_dir)
-GFS.get_awesome_icon_dir = function() end
+function GFS.get_awesome_icon_dir() end
 
 --- ### Description
 --- Get the user configuration or cache directory.
@@ -136,7 +142,7 @@ GFS.get_awesome_icon_dir = function() end
 --- @return string result The string containing the requested path.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#get_dir)
-GFS.get_dir = function(directory) end
+function GFS.get_dir(directory) end
 
 --- ### Description
 --- Get the name of a random file from a given directory.
@@ -148,6 +154,6 @@ GFS.get_dir = function(directory) end
 --- @return string | nil result A randomly selected filename from the specified path (with a specified extension if necessary) or null if no suitable file is found. If `absolute_path` is set, a path will be returned instead of a filename.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html#get_random_file_from_dir)
-GFS.get_random_file_from_dir = function(path, extensions, absolute_path) end
+function GFS.get_random_file_from_dir(path, extensions, absolute_path) end
 
 return GFS

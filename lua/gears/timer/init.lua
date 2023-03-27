@@ -1,65 +1,70 @@
+---@diagnostic disable: missing-return, duplicate-set-field
+
+--- @module 'gears.timer'
+local gt
+
 --- ### Description
 --- Timer objects and functions.
 --- ### Information
 --- - **Copyright**: 2014 Uli Schlachter
 --- - **Originally authored by**: Uli Schlachter
+--- ### Constructor
+--- Returns `GTimerObj`, see `gears.timer.new`.
 ---
 --- [See all contributors on GitHub](https://github.com/awesomeWM/awesome/graphs/contributors)
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.timer.html)
---- @module "gears.timer"
-local GTiming = {
-  timer = {
-    --- ### Description
-    --- Create a simple timer for calling the `callback` function continuously.
-    ---
-    --- This is a small wrapper around [`gears.timer`](https://awesomewm.org/apidoc/core_components/gears.timer.html#), that creates a timer based on callback.
-    --- The timer will run continuously and call callback every [`timeout`](https://awesomewm.org/apidoc/core_components/gears.timer.html#timeout) seconds.
-    --- It is stopped when `callback` returns false,
-    --- when `callback` throws an error or when the `:stop()`
-    --- method is called on the return value.
-    --- ### Parameters
-    --- @param timeout number Timeout in seconds.
-    --- @param callback function Function to run.
-    --- ### Returns
-    --- @return Timer timer The new timer object.
-    ---
-    --- [View documents](https://awesomewm.org/apidoc/core_components/gears.timer.html#start_new)
-    start_new = function(timeout, callback) end,
+--- @class GTimer
+local GTimer = gt
 
-    --- ### Description
-    --- Create a simple timer for calling the `callback` function continuously.
-    ---
-    --- This function is almost identical to [`gears.timer.start_new`](https://awesomewm.org/apidoc/core_components/gears.timer.html#start_new).
-    --- The only difference is that this does not prevent the callback function from being garbage collected.
-    --- In addition to the conditions in [`gears.timer.start_new`](https://awesomewm.org/apidoc/core_components/gears.timer.html#start_new),
-    --- this timer will also stop if `callback` was garbage collected since the previous run.
-    --- ### Parameters
-    --- @param timeout number Timeout in seconds.
-    --- @param callback function Function to run.
-    --- ### Returns
-    --- @return Timer timer The new timer object.
-    ---
-    --- [View documents](https://awesomewm.org/apidoc/core_components/gears.timer.html#weak_start_new)
-    weak_start_new = function(timeout, callback) end,
+--- ### Description
+--- Create a simple timer for calling the `callback` function continuously.
+---
+--- This is a small wrapper around [`gears.timer`](https://awesomewm.org/apidoc/core_components/gears.timer.html#), that creates a timer based on callback.
+--- The timer will run continuously and call callback every [`timeout`](https://awesomewm.org/apidoc/core_components/gears.timer.html#timeout) seconds.
+--- It is stopped when `callback` returns false,
+--- when `callback` throws an error or when the `:stop()`
+--- method is called on the return value.
+--- ### Parameters
+--- @param timeout number Timeout in seconds.
+--- @param callback function Function to run.
+--- ### Returns
+--- @return GTimerObj timer The new timer object.
+---
+--- [View documents](https://awesomewm.org/apidoc/core_components/gears.timer.html#start_new)
+function GTimer.start_new(timeout, callback) end
 
-    --- ### Description
-    --- Run all pending delayed calls now.
-    --- This function should best not be used at all, because it means that less batching happens and the delayed calls run prematurely.
-    ---
-    --- [View documents](https://awesomewm.org/apidoc/core_components/gears.timer.html#run_delayed_calls_now)
-    run_delayed_calls_now = function() end,
+--- ### Description
+--- Create a simple timer for calling the `callback` function continuously.
+---
+--- This function is almost identical to [`gears.timer.start_new`](https://awesomewm.org/apidoc/core_components/gears.timer.html#start_new).
+--- The only difference is that this does not prevent the callback function from being garbage collected.
+--- In addition to the conditions in [`gears.timer.start_new`](https://awesomewm.org/apidoc/core_components/gears.timer.html#start_new),
+--- this timer will also stop if `callback` was garbage collected since the previous run.
+--- ### Parameters
+--- @param timeout number Timeout in seconds.
+--- @param callback function Function to run.
+--- ### Returns
+--- @return GTimerObj timer The new timer object.
+---
+--- [View documents](https://awesomewm.org/apidoc/core_components/gears.timer.html#weak_start_new)
+function GTimer.weak_start_new(timeout, callback) end
 
-    --- ### Description
-    --- Call the given function at the end of the current GLib event loop iteration.
-    --- ### Parameters
-    --- @param callback function The function that should be called.
-    --- @param ... any Arguments to the callback function
-    ---
-    --- [View documents](https://awesomewm.org/apidoc/core_components/gears.timer.html#delayed_call)
-    delayed_call = function(callback, ...) end,
-  },
-}
+--- ### Description
+--- Run all pending delayed calls now.
+--- This function should best not be used at all, because it means that less batching happens and the delayed calls run prematurely.
+---
+--- [View documents](https://awesomewm.org/apidoc/core_components/gears.timer.html#run_delayed_calls_now)
+function GTimer.run_delayed_calls_now() end
+
+--- ### Description
+--- Call the given function at the end of the current GLib event loop iteration.
+--- ### Parameters
+--- @param callback function The function that should be called.
+--- @param ... any Arguments to the callback function
+---
+--- [View documents](https://awesomewm.org/apidoc/core_components/gears.timer.html#delayed_call)
+function GTimer.delayed_call(callback, ...) end
 
 --- ### Description
 --- Create a new timer object.
@@ -70,12 +75,14 @@ local GTiming = {
 --- ### Parameters
 --- @param args TimerDescriptor The arguments.
 --- ### Returns
---- @return Timer timer A new timer.
+--- @return GTimerObj timer A new timer.
 ---
 --- [View documents](https://awesomewm.org/apidoc/core_components/gears.timer.html#gears.timer)
-GTiming.timer = function(args) end
+function GTimer.new(args) end
 
---- @class Timer : Object
+--- ### Description
+--- `gears.timer` object.
+--- @class GTimerObj : GObjectObj
 --- @field started boolean The timer is started.
 --- @field timeout TimerPropertyTimeout The timer timeout value.
 local Timer = {}
@@ -151,4 +158,4 @@ function Timer:stop() end
 --- [View documents](https://awesomewm.org/apidoc/core_components/gears.timer.html#again)
 function Timer:again() end
 
-return GTiming.timer
+return GTimer

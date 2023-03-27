@@ -1,3 +1,8 @@
+--- @diagnostic disable: missing-return, duplicate-set-field
+
+--- @module 'gears.table'
+local gt
+
 --- ### Description
 --- Table module for gears.
 --- ### Examples
@@ -13,7 +18,8 @@
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html)
-local GTable = {}
+--- @class GTable
+local GTable = gt
 
 --- ### Description
 --- Join all tables given as arguments.
@@ -24,7 +30,7 @@ local GTable = {}
 --- @return table result A new table containing all entries from the arguments.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#join)
-GTable.join = function(...) end
+function GTable.join(...) end
 
 --- ### Description
 --- Override elements in the target table with values from the source table.
@@ -38,7 +44,7 @@ GTable.join = function(...) end
 --- @return table result The target table.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#crush)
-GTable.crush = function(target, source, raw) end
+function GTable.crush(target, source, raw) end
 
 --- ### Description
 --- Pack all elements with an integer key into a new table.
@@ -51,7 +57,7 @@ GTable.crush = function(target, source, raw) end
 --- @return table A packed table with only numeric keys.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#from_sparse)
-GTable.from_sparse = function(table) end
+function GTable.from_sparse(table) end
 
 --- ### Description
 --- Check if a table has an item and return its key.
@@ -64,7 +70,7 @@ GTable.from_sparse = function(table) end
 --- @return nil result Returns null if nothing is found
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#hasitem)
-GTable.hasitem = function(table, item) end
+function GTable.hasitem(table, item) end
 
 --- ### Description
 --- Get all matching table keys for a `matcher` function.
@@ -78,7 +84,7 @@ GTable.hasitem = function(table, item) end
 --- @return table<K, V> | nil result An ordered table with all the keys or `nil` if none were found.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#find_keys)
-GTable.find_keys = function(table, matcher, ordered, max) end
+function GTable.find_keys(table, matcher, ordered, max) end
 
 --- ### Description
 --- Find the first key that matches a function.
@@ -91,7 +97,7 @@ GTable.find_keys = function(table, matcher, ordered, max) end
 --- @return table<K, V> | nil result The table key or nil.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#find_first_key)
-GTable.find_first_key = function(table, matcher, ordered) end
+function GTable.find_first_key(table, matcher, ordered) end
 
 --- ### Description
 --- Get a sorted table with all keys from a table.
@@ -101,7 +107,7 @@ GTable.find_first_key = function(table, matcher, ordered) end
 --- @return table result A table with keys.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#keys)
-GTable.keys = function(table) end
+function GTable.keys(table) end
 
 --- ### Description
 --- Get the number of keys in a table, both integer and string indicies.
@@ -113,7 +119,7 @@ GTable.keys = function(table) end
 --- @return number result The number of keys in the table.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#count_keys)
-GTable.count_keys = function(table) end
+function GTable.count_keys(table) end
 
 --- ### Description
 --- Filter a table's keys for certain content type.
@@ -124,7 +130,7 @@ GTable.count_keys = function(table) end
 --- @return table result A filtered table.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#keys_filter)
-GTable.keys_filter = function(table, ...) end
+function GTable.keys_filter(table, ...) end
 
 --- ### Description
 --- Reverse a table.
@@ -134,7 +140,7 @@ GTable.keys_filter = function(table, ...) end
 --- @return table result A reversed table.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#reverse)
-GTable.reverse = function(table) end
+function GTable.reverse(table) end
 
 --- ### Description
 --- Clone a table.
@@ -145,7 +151,7 @@ GTable.reverse = function(table) end
 --- @return table result A clone of `table`.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#clone)
-GTable.clone = function(table, deep) end
+function GTable.clone(table, deep) end
 
 --- ### Description
 --- Get the next (or previous) value from a table and cycle if necessary.
@@ -163,7 +169,7 @@ GTable.clone = function(table, deep) end
 --- @return number | nil index If a value is found, this is its index within the input table.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#cycle_value)
-GTable.cycle_value = function(table, value, step_size, filter, start_at) end
+function GTable.cycle_value(table, value, step_size, filter, start_at) end
 
 --- ### Description
 --- Iterate over a table.
@@ -177,7 +183,7 @@ GTable.cycle_value = function(table, value, step_size, filter, start_at) end
 --- @return function result Undocumented!
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#iterate)
-GTable.iterate = function(table, filter, start) end
+function GTable.iterate(table, filter, start) end
 
 --- ### Description
 --- Merge items from the source table into the target table.
@@ -191,7 +197,7 @@ GTable.iterate = function(table, filter, start) end
 --- @return table result The target table.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#merge)
-GTable.merge = function(target, source) end
+function GTable.merge(target, source) end
 
 --- ### Description
 --- Update the `target` table with entries from the `new` table.
@@ -215,7 +221,7 @@ GTable.merge = function(target, source) end
 --- @return table updated The updated entries.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#diff_merge)
-GTable.diff_merge = function(target, new, identifier, merger) end
+function GTable.diff_merge(target, new, identifier, merger) end
 
 --- ### Description
 --- Map a function to a table.
@@ -228,6 +234,6 @@ GTable.diff_merge = function(target, new, identifier, merger) end
 --- @return table result The resulting table
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html#map)
-GTable.map = function(action, table) end
+function GTable.map(action, table) end
 
 return GTable

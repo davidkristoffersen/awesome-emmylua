@@ -1,3 +1,5 @@
+---@diagnostic disable: missing-return, duplicate-set-field
+
 --- ### Description
 --- Module dedicated to gather common shape painters.
 ---
@@ -37,7 +39,7 @@
 --- [See all contributors on GitHub](https://github.com/awesomeWM/awesome/graphs/contributors)
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html)
---- @module "gears.shape"
+--- @class GShape
 local GShape = {}
 
 --- ### Description
@@ -61,7 +63,7 @@ local GShape = {}
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#partial_squircle)
-GShape.partial_squircle = function(cairo, width, height, top_left, top_right, bottom_right, bottom_left, rate, delta) end
+function GShape.partial_squircle(cairo, width, height, top_left, top_right, bottom_right, bottom_left, rate, delta) end
 
 --- ### Description
 --- Add a squircle shape to the current path. This will behave the same as [`partial_squircle`](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#partial_squircle).
@@ -79,7 +81,7 @@ GShape.partial_squircle = function(cairo, width, height, top_left, top_right, bo
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#squircle)
-GShape.squircle = function(cairo, width, height, rate, delta) end
+function GShape.squircle(cairo, width, height, rate, delta) end
 
 --- ### Description
 --- Add a star shape to the current path. The star size will be the minimum of the given width and weight.
@@ -96,7 +98,7 @@ GShape.squircle = function(cairo, width, height, rate, delta) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#start)
-GShape.star = function(cairo, width, height, number) end
+function GShape.star(cairo, width, height, number) end
 
 --- ### Description
 --- Add a rounded rectangle to the current path. Note: If the radius is bigger than either half side, it will be reduced.
@@ -113,7 +115,7 @@ GShape.star = function(cairo, width, height, number) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#rounded_rect)
-GShape.rounded_rect = function(cairo, width, height, radius) end
+function GShape.rounded_rect(cairo, width, height, radius) end
 
 --- ### Description
 --- Add a rectangle delimited by 2 180 degree arcs to the path.
@@ -129,7 +131,7 @@ GShape.rounded_rect = function(cairo, width, height, radius) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#rounded_bar)
-GShape.rounded_bar = function(cairo, width, height) end
+function GShape.rounded_bar(cairo, width, height) end
 
 --- ### Description
 --- A rounded rect with only some of the corners rounded.
@@ -150,7 +152,7 @@ GShape.rounded_bar = function(cairo, width, height) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#partially_rounded_rect)
-GShape.partially_rounded_rect = function(cairo, width, height, top_left, top_right, bottom_right, bottom_left, radius) end
+function GShape.partially_rounded_rect(cairo, width, height, top_left, top_right, bottom_right, bottom_left, radius) end
 
 --- ### Description
 --- A rounded rectangle with a triangle at the top.
@@ -169,7 +171,7 @@ GShape.partially_rounded_rect = function(cairo, width, height, top_left, top_rig
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#infobubble)
-GShape.infobubble = function(cairo, width, height, corner_radius, arrow_size, arrow_position) end
+function GShape.infobubble(cairo, width, height, corner_radius, arrow_size, arrow_position) end
 
 --- ### Description
 --- A rectangle terminated by an arrow.
@@ -186,7 +188,7 @@ GShape.infobubble = function(cairo, width, height, corner_radius, arrow_size, ar
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#rectangular_tag)
-GShape.rectangular_tag = function(cairo, width, height, arrow_length) end
+function GShape.rectangular_tag(cairo, width, height, arrow_length) end
 
 --- ### Description
 --- A simple arrow shape.
@@ -205,7 +207,7 @@ GShape.rectangular_tag = function(cairo, width, height, arrow_length) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#arrow)
-GShape.arrow = function(cairo, width, height, head_width, shaft_width, shaft_length) end
+function GShape.arrow(cairo, width, height, head_width, shaft_width, shaft_length) end
 
 --- ### Description
 --- A squeezed hexagon filling the rectangle.
@@ -221,7 +223,7 @@ GShape.arrow = function(cairo, width, height, head_width, shaft_width, shaft_len
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#hexagon)
-GShape.hexagon = function(cairo, width, height) end
+function GShape.hexagon(cairo, width, height) end
 
 --- @type ShapeFn
 --- ### Description
@@ -239,7 +241,7 @@ GShape.hexagon = function(cairo, width, height) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#powerline)
-GShape.powerline = function(cairo, width, height, arrow_depth) end
+function GShape.powerline(cairo, width, height, arrow_depth) end
 
 --- ### Description
 --- An isosceles triangle.
@@ -255,7 +257,7 @@ GShape.powerline = function(cairo, width, height, arrow_depth) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#isosceles_triangle)
-GShape.isosceles_triangle = function(cairo, width, height) end
+function GShape.isosceles_triangle(cairo, width, height) end
 
 --- ### Description
 --- A cross (+) symbol.
@@ -272,7 +274,7 @@ GShape.isosceles_triangle = function(cairo, width, height) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#cross)
-GShape.cross = function(cairo, width, height, thickness) end
+function GShape.cross(cairo, width, height, thickness) end
 
 --- ### Description
 --- A similar shape to the [`rounded_rect`](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#rounded_rect), but with sharp corners.
@@ -289,7 +291,7 @@ GShape.cross = function(cairo, width, height, thickness) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#octogon)
-GShape.octogon = function(cairo, width, height, corner_radius) end
+function GShape.octogon(cairo, width, height, corner_radius) end
 
 --- ### Description
 --- A circle shape.
@@ -306,7 +308,7 @@ GShape.octogon = function(cairo, width, height, corner_radius) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#circle)
-GShape.circle = function(cairo, width, height, radius) end
+function GShape.circle(cairo, width, height, radius) end
 
 --- ### Description
 --- A simple rectangle.
@@ -322,7 +324,7 @@ GShape.circle = function(cairo, width, height, radius) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#rectangle)
-GShape.rectangle = function(cairo, width, height) end
+function GShape.rectangle(cairo, width, height) end
 
 --- ### Description
 --- A diagonal parallelogram with the bottom left corner at `x = 0` and top right at `x = width`.
@@ -339,7 +341,7 @@ GShape.rectangle = function(cairo, width, height) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#parallelogram)
-GShape.parallelogram = function(cairo, width, height, base_width) end
+function GShape.parallelogram(cairo, width, height, base_width) end
 
 --- ### Description
 --- A losange
@@ -355,7 +357,7 @@ GShape.parallelogram = function(cairo, width, height, base_width) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#losange)
-GShape.losange = function(cairo, width, height) end
+function GShape.losange(cairo, width, height) end
 
 --- ### Description
 --- A pie.
@@ -376,7 +378,7 @@ GShape.losange = function(cairo, width, height) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#pie)
-GShape.pie = function(cairo, width, height, start_angle, end_angle, radius) end
+function GShape.pie(cairo, width, height, start_angle, end_angle, radius) end
 
 --- ### Description
 --- A rounded arc.
@@ -397,7 +399,7 @@ GShape.pie = function(cairo, width, height, start_angle, end_angle, radius) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#arc)
-GShape.arc = function(cairo, width, height, thickness, start_angle, end_angle, start_rounded, end_rounded) end
+function GShape.arc(cairo, width, height, thickness, start_angle, end_angle, start_rounded, end_rounded) end
 
 --- ### Description
 --- A partial rounded bar. How much of the rounded bar is visible depends on the given percentage value.
@@ -417,7 +419,7 @@ GShape.arc = function(cairo, width, height, thickness, start_angle, end_angle, s
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#radial_progress)
-GShape.radial_progress = function(cairo, width, height, percent, hide_left) end
+function GShape.radial_progress(cairo, width, height, percent, hide_left) end
 
 --- ### Description
 --- Adjust the shape using a transformation object.
@@ -432,6 +434,6 @@ GShape.radial_progress = function(cairo, width, height, percent, hide_left) end
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#transform)
-GShape.transform = function(shape) end
+function GShape.transform(shape) end
 
 return GShape

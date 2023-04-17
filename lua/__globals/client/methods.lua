@@ -1,4 +1,3 @@
---- @meta
 --- @diagnostic disable: missing-return
 
 --- Return client struts (reserved space at the edge of the screen).
@@ -23,7 +22,7 @@ function client:isvisible() end
 function client:kill() end
 
 --- Swap a client with another one in global client list.
---- @param c client A client to swap with.
+--- @param c Client A client to swap with.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#swap)
 function client:swap(c) end
@@ -146,7 +145,7 @@ function client:move_to_tag(target) end
 function client:toggle_tag(target) end
 
 --- Move a client to a screen. Default is next screen, cycling.
---- @param s screen|nil The screen, default to current + 1.
+--- @param s Screen|nil The screen, default to current + 1.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#move_to_screen)
 function client:move_to_screen(s) end
@@ -159,14 +158,14 @@ function client:to_selected_tags() end
 
 --- Get a matching transient_for client (if any).
 --- @param matcher function A function that should return true, if a matching parent client is found.
---- @return client|nil The matching parent client or nil.
+--- @return Client|nil The matching parent client or nil.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#get_transient_for_matching)
 function client:get_transient_for_matching(matcher) end
 
 --- Is a client transient for another one?
---- @param c2 client The parent client to check.
---- @return client|nil The parent client or nil.
+--- @param c2 Client The parent client to check.
+--- @return Client|nil The parent client or nil.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#is_transient_for)
 function client:is_transient_for(c2) end

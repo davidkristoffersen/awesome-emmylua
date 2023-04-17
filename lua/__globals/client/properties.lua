@@ -1,6 +1,3 @@
---- @meta
---- @class client
-
 --- @module 'gears'
 local gears
 
@@ -123,8 +120,7 @@ client.icon_sizes = nil
 
 --- Client screen.
 ---
----# TODO Fix type after screen.lua is typed
---- @type screen
+--- @type Screen
 ---## Constraints
 --- - Default value: This usually correspond to where the top-left (or other gravities) is placed. Then it is mapped to the screen `geometry`.
 --- - Type description:
@@ -284,7 +280,7 @@ client.maximized_horizontal = false
 client.maximized_vertical = false
 
 --- The client the window is transient for.
---- @type client|nil
+--- @type Client|nil
 ---## Constraints
 --- - Access: read-only
 --- - Default value: `nil`

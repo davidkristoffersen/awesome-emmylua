@@ -1,4 +1,4 @@
---- @diagnostic disable: missing-return, duplicate-set-field
+--- @diagnostic disable: missing-return, duplicate-set-field, unused-local
 
 --- Get the number of instances.
 --- @return integer: Number of client objects alive.
@@ -12,8 +12,7 @@ function client.instances() end
 
 --- Get all clients into a table.
 ---
----# TODO Fix type after screen.lua is typed
---- @param screen integer|screen?: A screen number to filter clients on (optional).
+--- @param screen integer|Screen?: A screen number to filter clients on (optional).
 --- @param stacked boolean?: Return clients in stacking order? (ordered from top to bottom) (optional).
 --- @return table: A table with clients.
 --- ## Usage

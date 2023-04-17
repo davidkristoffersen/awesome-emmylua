@@ -1,4 +1,4 @@
---- @meta
+--- ### Description
 --- A window managed by AwesomeWM, representing a process or part of it.
 ---
 --- Clients in Awesome (and X11) are windows associated with a program or its parts, such as dialogs.
@@ -15,5 +15,5 @@
 --- ```
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html)
---- @class client
+--- @class Client
 client = {}

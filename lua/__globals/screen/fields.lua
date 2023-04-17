@@ -1,0 +1,3 @@
+--- @class Screen
+--- @field primary Screen The primary screen.
+--- @field automatic_factory ScreenAutomaticFactory

@@ -1,0 +1,25 @@
+--- ### Description
+--- A physical or virtual screen object.
+---
+--- Screen objects can be added and removed over time. To get a callback for all current and future screens, use `awful.screen.connect_for_each_screen`:
+---
+--- ```lua
+--- awful.screen.connect_for_each_screen(function(s)
+---     -- do something
+--- end)
+--- ```
+---
+--- It is also possible to loop over all current screens using:
+---
+--- ```lua
+--- for s in screen do
+---     -- do something
+--- end
+--- ```
+---
+--- Most basic Awesome objects also have a screen property, see `mouse.screen`, `client.screen`, `wibox.screen`, and `tag.screen`.
+---
+--- ---
+--- [**View doc**](https://awesomewm.org/apidoc/core_components/screen.html)
+--- @class Screen
+screen = {}

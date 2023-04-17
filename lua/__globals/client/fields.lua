@@ -1,2 +1,2 @@
---- @class client
---- @field focus client The currently focused client.
+--- @class Client
+--- @field focus Client The currently focused client.

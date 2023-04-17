@@ -39,9 +39,6 @@
 --- @alias LockKeyLiteral
 --- | 'Lock' # Caps Lock key
 
---- @alias AnyModifierLiteral
---- | 'Any' # Any modifier key
-
 --- @alias AltKeyLiteral
 --- | 'Mod1' # Alt key
 
@@ -57,17 +54,24 @@
 --- @alias ModeSwitchKeyLiteral
 --- | 'Mod5' # Mode Switch key
 
+--- @alias AnyModifierLiteral
+--- | 'Any' # Any modifier key
+
+--- @alias NoModifierLiteral
+--- | '' # No modifier key
+
 --- ### Description
 --- A literal string that represents a modifier key.
---- @alias Modifier
+--- @alias AwfulModifier
 --- | ControlKeyLiteral
 --- | ShiftKeyLiteral
 --- | LockKeyLiteral
---- | AnyModifierLiteral
 --- | AltKeyLiteral
 --- | NumLockKeyLiteral
 --- | ScrollLockKeyLiteral
 --- | SuperKeyLiteral
 --- | ModeSwitchKeyLiteral
+--- | AnyModifierLiteral
+--- | NoModifierLiteral
 
 --#endregion

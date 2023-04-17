@@ -1,4 +1,4 @@
----@diagnostic disable: missing-return
+---@diagnostic disable: missing-return, unused-local
 
 --- ### Description
 --- AwesomeWM lifecycle API.
@@ -36,6 +36,19 @@ awesome = {}
 --- - [`Object::connect_signal`](https://awesomewm.org/apidoc/utility_libraries/gears.object.html#connect_signal) from [`gears.object`](https://awesomewm.org/apidoc/utility_libraries/gears.object.html).
 ---
 --- [View documents](https://awesomewm.org/apidoc/core_components/awesome.html#connect_signal)
+---@diagnostic disable-next-line: duplicate-set-field
+function awesome.connect_signal(name, action) end
+
+--- ### Description
+--- Connect to a signal.
+--- ### Parameters
+--- @param name AwesomeAPISignal The name of the signal.
+--- @param action function The callback to call when the signal is emitted.
+--- ### Inherits
+--- - [`Object::connect_signal`](https://awesomewm.org/apidoc/utility_libraries/gears.object.html#connect_signal) from [`gears.object`](https://awesomewm.org/apidoc/utility_libraries/gears.object.html).
+---
+--- [View documents](https://awesomewm.org/apidoc/core_components/awesome.html#connect_signal)
+---@diagnostic disable-next-line: duplicate-set-field
 function awesome:connect_signal(name, action) end
 
 --- ### Description

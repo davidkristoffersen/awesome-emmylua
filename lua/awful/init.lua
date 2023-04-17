@@ -25,6 +25,7 @@ local lib
 --- @class Awful
 local A = lib
 
-A.key = require('awful.key.functions')
+A.key = require('awful.key.init')
+A.widget.launcher = require('awful.widget.launcher')
 
 return A

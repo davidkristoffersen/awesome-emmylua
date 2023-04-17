@@ -1,7 +1,7 @@
 ---@diagnostic disable: missing-return, duplicate-set-field
 
 --- @module 'gears.timer'
-local gt
+local lib
 
 --- ### Description
 --- Timer objects and functions.
@@ -9,13 +9,13 @@ local gt
 --- - **Copyright**: 2014 Uli Schlachter
 --- - **Originally authored by**: Uli Schlachter
 --- ### Constructor
---- Returns `GTimerObj`, see `gears.timer.new`.
+--- Returns `GearsTimerObj`, see `gears.timer.new`.
 ---
 --- [See all contributors on GitHub](https://github.com/awesomeWM/awesome/graphs/contributors)
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.timer.html)
---- @class GTimer
-local GTimer = gt
+--- @class GearsTimer
+local GTimer = lib
 
 --- ### Description
 --- Create a simple timer for calling the `callback` function continuously.
@@ -29,7 +29,7 @@ local GTimer = gt
 --- @param timeout number Timeout in seconds.
 --- @param callback function Function to run.
 --- ### Returns
---- @return GTimerObj timer The new timer object.
+--- @return GearsTimerObj timer The new timer object.
 ---
 --- [View documents](https://awesomewm.org/apidoc/core_components/gears.timer.html#start_new)
 function GTimer.start_new(timeout, callback) end
@@ -45,7 +45,7 @@ function GTimer.start_new(timeout, callback) end
 --- @param timeout number Timeout in seconds.
 --- @param callback function Function to run.
 --- ### Returns
---- @return GTimerObj timer The new timer object.
+--- @return GearsTimerObj timer The new timer object.
 ---
 --- [View documents](https://awesomewm.org/apidoc/core_components/gears.timer.html#weak_start_new)
 function GTimer.weak_start_new(timeout, callback) end
@@ -75,14 +75,14 @@ function GTimer.delayed_call(callback, ...) end
 --- ### Parameters
 --- @param args TimerDescriptor The arguments.
 --- ### Returns
---- @return GTimerObj timer A new timer.
+--- @return GearsTimerObj timer A new timer.
 ---
 --- [View documents](https://awesomewm.org/apidoc/core_components/gears.timer.html#gears.timer)
 function GTimer.new(args) end
 
 --- ### Description
 --- `gears.timer` object.
---- @class GTimerObj : GObjectObj
+--- @class GearsTimerObj : GearsObjectObj
 --- @field started boolean The timer is started.
 --- @field timeout TimerPropertyTimeout The timer timeout value.
 local Timer = {}

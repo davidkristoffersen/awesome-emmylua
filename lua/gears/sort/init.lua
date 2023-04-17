@@ -1,14 +1,14 @@
 ---@diagnostic disable: missing-return, duplicate-set-field
 
 --- @module 'gears.sort'
-local gs
+local lib
 
 --- ### Description
 --- Extra sorting algorithms.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.sort.html)
---- @class GSort
-local GSort = gs
+--- @class GearsSort
+local GSort = lib
 
 --- ### Description
 --- A topological sorting class.
@@ -16,8 +16,8 @@ local GSort = gs
 --- Returns `GSortTopologicalObj`, see `gears.sort.topological.new`.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.sort.html#topological)
---- @class GSortTopological
-GSort.topological = gs.topological
+--- @class GearsSortTopological
+GSort.topological = lib.topological
 
 --- ### Description
 --- A topological sorting class.
@@ -25,14 +25,14 @@ GSort.topological = gs.topological
 --- The object returned by this function allows to create simple dependency graphs.
 --- It can be used for decision making or ordering of complex sequences.
 --- ### Returns
---- @return GSortTopologicalObj result A topological sorting class.
+--- @return GearsSortTopologicalObj result A topological sorting class.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.sort.html#topological)
 function GSort.topological.new() end
 
 --- ### Description
 --- `gears.sort.topological` object.
---- @class GSortTopologicalObj
+--- @class GearsSortTopologicalObj
 local Topological = {}
 
 --- ### Description
@@ -57,7 +57,7 @@ function Topological:prepend(node, surbodinates) end
 --- Create a copy of this topological sort.
 --- This is useful to backup it before adding elements that can potentially have circular dependencies and thus render the original useless.
 --- ### Returns
---- @return GSortTopologicalObj result Undocumented!
+--- @return GearsSortTopologicalObj result Undocumented!
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.sort.html#clone)
 function Topological:clone() end

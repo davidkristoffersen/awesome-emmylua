@@ -1,7 +1,7 @@
 ---@diagnostic disable: missing-return
 
 --- @module 'gears.geometry'
-local gg
+local lib
 
 --- ### Description
 --- Helper functions used to compute geometries.
@@ -14,8 +14,8 @@ local gg
 --- [See all contributors on GitHub](https://github.com/awesomeWM/awesome/graphs/contributors)
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.geometry.html)
---- @class GGeometry
-local GGeometry = gg
+--- @class GearsGeometry
+local GGeometry = lib
 local DefRectangle = {}
 
 --- ### Description

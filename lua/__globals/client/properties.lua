@@ -95,11 +95,11 @@ client.machine = nil
 client.icon_name = nil
 
 --- @alias image
----| 'string' # Interpreted as a path to an image file.
----| 'string' # A valid SVG content.
----| 'cairo.surface' # A cairo image surface: Directly used as-is.
----| 'librsvg' # A librsvg handle object: Directly used as-is.
----| 'nil' # Unset the image.
+---| string # Interpreted as a path to an image file.
+---| string # A valid SVG content.
+---| CAPICairoSurface # A cairo image surface: Directly used as-is.
+---| CAPILibrsvg # A librsvg handle object: Directly used as-is.
+---| nil # Unset the image.
 
 --- The client icon as a surface.
 --- @type image

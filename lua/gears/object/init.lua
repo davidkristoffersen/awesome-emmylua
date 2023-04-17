@@ -1,14 +1,14 @@
 ---@diagnostic disable: missing-return
 
 --- @module 'gears.object'
-local go
+local lib
 
 --- ### Description
 --- The object oriented programming base class used by various Awesome widgets and components.
 ---
 --- It provide basic observer pattern, signaling and dynamic properties.
 --- ### Constructor
---- Returns `GObjectObj`, see `gears.object.new`.
+--- Returns `GearsObjectObj`, see `gears.object.new`.
 --- ### Information
 --- - **Copyright**: 2010 Uli Schlachter
 --- - **Originally authored by**: Uli Schlachter
@@ -16,8 +16,8 @@ local go
 --- [See all contributors on GitHub](https://github.com/awesomeWM/awesome/graphs/contributors)
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.object.html)
---- @class GObject
-local GObject = go
+--- @class GearsObject
+local GObject = lib
 
 --- ### Description
 --- Creates an AwesomeWM object.
@@ -29,14 +29,14 @@ local GObject = go
 --- ### Parameters
 --- @param args ObjectDescriptor The arguments.
 --- ### Returns
---- @return GObjectObj result A new object.
+--- @return GearsObjectObj result A new object.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.object.html#gears.object)
 function GObject.new(args) end
 
 --- ### Description
 --- `gears.object` object.
---- @class GObjectObj
+--- @class GearsObjectObj
 local Object = {}
 
 --- ### Description

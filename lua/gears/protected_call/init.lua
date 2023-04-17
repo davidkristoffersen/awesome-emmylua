@@ -1,3 +1,6 @@
+--- @module 'gears.protected_call'
+local lib
+
 --- ### Description
 --- Call a function in protected mode and handle error reports.
 --- ### Information
@@ -7,8 +10,8 @@
 --- [See all contributors on GitHub](https://github.com/awesomeWM/awesome/graphs/contributors)
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.protected_call.html)
---- @class GProtected_call
-local GSafety = {}
+--- @class GearsProtected_call
+local GSafety = lib
 
 --- ### Description
 --- Call a function in protected mode and handle error-reporting.

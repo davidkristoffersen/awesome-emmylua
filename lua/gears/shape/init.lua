@@ -1,5 +1,8 @@
 ---@diagnostic disable: missing-return, duplicate-set-field
 
+--- @module 'gears.shape'
+local lib
+
 --- ### Description
 --- Module dedicated to gather common shape painters.
 ---
@@ -39,8 +42,8 @@
 --- [See all contributors on GitHub](https://github.com/awesomeWM/awesome/graphs/contributors)
 ---
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html)
---- @class GShape
-local GShape = {}
+--- @class GearsShape
+local GShape = lib
 
 --- ### Description
 --- Add a squircle shape with only some of the corner are "circled" to the current path. The squircle is not exactly as the definition.

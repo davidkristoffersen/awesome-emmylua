@@ -1,18 +1,9 @@
 --- @meta
 --- @diagnostic disable: missing-return
 
---- @module 'awful'
-local awful
-
---- @class Struts: table A table with strut values.
---- @field left integer? The left strut value.
---- @field right integer? The right strut value.
---- @field top integer? The top strut value.
---- @field bottom integer? The bottom strut value.
-
 --- Return client struts (reserved space at the edge of the screen).
---- @param struts Struts A table with new strut values, or none.
---- @return Struts: A table with strut values.
+--- @param struts CAPIStrut A table with new strut values, or none.
+--- @return CAPIStrut: A table with strut values.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#struts)
 function client:struts(struts) end
@@ -86,7 +77,7 @@ function client:apply_size_hints(width, height) end
 
 --- Get the client's n-th icon.
 --- @param index integer The index in the list of icons to get.
---- @return surface: A lightuserdata for a cairo surface. This reference must be destroyed!
+--- @return CAPICairoSurface: A light userdata for a cairo surface. This reference must be destroyed!
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#get_icon)
 function client:get_icon(index) end
@@ -98,28 +89,25 @@ function client:get_icon(index) end
 function client:jump_to(merge) end
 
 --- Append a keybinding.
---- @param key awful.key The key.
+--- @param key AwfulKey The key.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#append_keybinding)
 function client:append_keybinding(key) end
 
---- @type awful_key
-local k = {}
-
 --- Remove a keybinding.
---- @param key awful.key The key.
+--- @param key AwfulKey The key.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#remove_keybinding)
 function client:remove_keybinding(key) end
 
 --- Append a mousebinding.
---- @param button awful.button The button.
+--- @param button AwfulButton The button.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#append_mousebinding)
 function client:append_mousebinding(button) end
 
 --- Remove a mousebinding.
---- @param button awful.button The button.
+--- @param button AwfulButton The button.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#remove_mousebinding)
 function client:remove_mousebinding(button) end
@@ -183,15 +171,10 @@ function client:get_transient_for_matching(matcher) end
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#is_transient_for)
 function client:is_transient_for(c2) end
 
+--- ### Description
 --- Activate (focus) a client.
---- @table args
---- @string[opt="other"] args.context Why was this activate called?
---- @boolean[opt=true] args.raise Raise the client to the top of its layer and unminimize it (if needed).
---- @boolean[opt=false] args.force Force the activation even for unfocusable clients.
---- @boolean[opt=false] args.switch_to_tags
---- @boolean[opt=false] args.switch_to_tag
---- @boolean[opt=false] args.action Once activated, perform an action.
---- @boolean[opt=false] args.toggle_minimization
+---
+--- @param args ClientActivateArgs
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#activate)
 function client:activate(args) end

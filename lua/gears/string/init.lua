@@ -1,11 +1,14 @@
 ---@diagnostic disable: missing-return, duplicate-set-field
 
+--- @module 'gears.string'
+local lib
+
 --- ### Description
 --- String module for gears.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.string.html)
---- @class GString
-local GString = {}
+--- @class GearsString
+local GString = lib
 
 --- ### Description
 --- Escape a string from XML char. Useful to set raw text in textbox.

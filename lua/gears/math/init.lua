@@ -1,14 +1,14 @@
 ---@diagnostic disable: missing-return, duplicate-set-field
 
 --- @module 'gears.math'
-local gm
+local lib
 
 --- ### Description
 --- Math module for gears.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.math.html)
---- @class GMath
-local GMath = gm
+--- @class GearsMath
+local GMath = lib
 
 --- ### Description
 --- Return all subsets of a specific set. This function, giving a set, will return all subset it.

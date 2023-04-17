@@ -1,7 +1,7 @@
 --- @diagnostic disable: missing-return, duplicate-set-field
 
 --- @module 'gears.table'
-local gt
+local lib
 
 --- ### Description
 --- Table module for gears.
@@ -18,8 +18,8 @@ local gt
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.table.html)
---- @class GTable
-local GTable = gt
+--- @class GearsTable
+local GTable = lib
 
 --- ### Description
 --- Join all tables given as arguments.

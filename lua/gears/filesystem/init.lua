@@ -1,14 +1,14 @@
 --- @diagnostic disable: missing-return, duplicate-set-field
 
 --- @module 'gears.filesystem'
-local gf
+local lib
 
 --- ### Description
 --- Filesystem module for `gears`.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.filesystem.html)
---- @class GFilesystem
-local GFS = gf
+--- @class GearsFilesystem
+local GFS = lib
 
 --- ### Description
 --- Create a directory, including all missing parent directories.

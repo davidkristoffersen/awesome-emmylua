@@ -1,6 +1,6 @@
 --- ### Description
 --- This file contains the EmmyLua based annotations for `awesome`, you should not use `require` in this file.
---- @module "globals.__emmylua_awesome"
+--- @module "__globals.awesome.init"
 
 --#region Awesome Signals
 

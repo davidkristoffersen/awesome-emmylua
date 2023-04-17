@@ -1,5 +1,5 @@
 --- @module 'awful'
-local a
+local lib
 
 --- ### Description
 --- Awful is a collection of libraries and widgets for AwesomeWM.
@@ -22,9 +22,9 @@ local a
 --- ```
 ---
 --- [View documents](https://awesomewm.org/apidoc/index.html#libraries)
---- @class awful
-local awful = a
+--- @class Awful
+local A = lib
 
-awful.key = require('awful.key.functions')
+A.key = require('awful.key.functions')
 
-return awful
+return A

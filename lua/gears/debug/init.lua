@@ -1,7 +1,7 @@
 --- @diagnostic disable: missing-return, duplicate-set-field
 
 --- @module 'gears.debug'
-local gd
+local lib
 
 --- ### Information
 --- - **Copyright**: 2010 Uli Schlachter
@@ -10,8 +10,8 @@ local gd
 --- [See all contributors on GitHub](https://github.com/awesomeWM/awesome/graphs/contributors)
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.debug.html)
---- @class GDebug
-local GDebugging = gd
+--- @class GearsDebug
+local GDebug = lib
 
 --- ### Description
 --- Inspect the value in data.
@@ -25,7 +25,7 @@ local GDebugging = gd
 --- @return string result A string that contains the expanded value of data.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.debug.html#dump_return)
-function GDebugging.dump_return(data, tag, depth) end
+function GDebug.dump_return(data, tag, depth) end
 
 --- ### Description
 --- Print the table (or any other value) to the console.
@@ -37,7 +37,7 @@ function GDebugging.dump_return(data, tag, depth) end
 --- @param depth? integer Depth of recursion.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.debug.html#dump)
-function GDebugging.dump(data, tag, depth) end
+function GDebug.dump(data, tag, depth) end
 
 --- ### Description
 --- Print an warning message.
@@ -45,7 +45,7 @@ function GDebugging.dump(data, tag, depth) end
 --- @param message string The warning message to print.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.debug.html#print_warning)
-function GDebugging.print_warning(message) end
+function GDebug.print_warning(message) end
 
 --- ### Description
 --- Print an error message.
@@ -53,7 +53,7 @@ function GDebugging.print_warning(message) end
 --- @param message string The error message to print.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.debug.html#print_error)
-function GDebugging.print_error(message) end
+function GDebug.print_error(message) end
 
 --- ### Description
 --- Display a deprecation notice, but only once per traceback.
@@ -65,7 +65,7 @@ function GDebugging.print_error(message) end
 --- @param args DebugDeprecateDescriptor Extra arguments.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.debug.html#deprecate)
-function GDebugging.deprecate(see, args) end
+function GDebug.deprecate(see, args) end
 
 --- ### Description
 --- Create a class proxy with deprecation messages.
@@ -76,6 +76,6 @@ function GDebugging.deprecate(see, args) end
 --- @param new_name string The new class name.
 ---
 --- [View documents](https://awesomewm.org/apidoc/utility_libraries/gears.debug.html#deprecate_class)
-function GDebugging.deprecate_class(fallback, old_name, new_name) end
+function GDebug.deprecate_class(fallback, old_name, new_name) end
 
-return GDebugging
+return GDebug

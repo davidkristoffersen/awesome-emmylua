@@ -1,0 +1,8 @@
+--- The CAPIColor structure represents a color with RGBA values and a pixel value.
+---@class CAPIColor
+---@field pixel integer The pixel value of the color.
+---@field red integer The red component of the color (0-65535).
+---@field green integer The green component of the color (0-65535).
+---@field blue integer The blue component of the color (0-65535).
+---@field alpha integer The alpha component of the color (0-65535).
+---@field initialized boolean Indicates whether the color is initialized or not.

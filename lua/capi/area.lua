@@ -1,0 +1,6 @@
+--- The CAPIArea structure represents an area with position and size.
+---@class CAPIArea
+---@field x integer The x-coordinate of the upper left corner.
+---@field y integer The y-coordinate of the upper left corner.
+---@field width integer The width of the area.
+---@field height integer The height of the area.

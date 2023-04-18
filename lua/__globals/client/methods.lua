@@ -52,15 +52,9 @@ function client:lower() end
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#unmanage)
 function client:unmanage() end
 
---- @class Geometry: table
---- @field x integer The horizontal position.
---- @field y integer The vertical position.
---- @field width integer The width.
---- @field height integer The height.
-
 --- Return or set client geometry.
---- @param geo Geometry|nil A table with new coordinates, or nil.
---- @return Geometry: A table with client geometry and coordinates.
+--- @param geo CAPIGeometry|nil A table with new coordinates, or nil.
+--- @return CAPIGeometry: A table with client geometry and coordinates.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#geometry)
 function client:geometry(geo) end

@@ -1,5 +1,5 @@
 --- @module 'gears'
-local g
+local lib
 
 --- ### Description
 --- Gears is a collection of utility libraries for AwesomeWM.
@@ -26,7 +26,7 @@ local g
 ---
 --- [View documents](https://awesomewm.org/apidoc/index.html#libraries)
 --- @class Gears
-local gears = g
+local gears = lib
 
 gears.color = require('gears.color.init')
 gears.debug = require('gears.debug.init')

@@ -91,15 +91,8 @@ client.machine = nil
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#icon_name)
 client.icon_name = nil
 
---- @alias image
----| string # Interpreted as a path to an image file.
----| string # A valid SVG content.
----| CAPICairoSurface # A cairo image surface: Directly used as-is.
----| CAPILibrsvg # A librsvg handle object: Directly used as-is.
----| nil # Unset the image.
-
 --- The client icon as a surface.
---- @type image
+--- @type DrawableImage
 ---## Constraints
 --- - Default value: This is provided by the application.
 --- ---
@@ -196,9 +189,7 @@ client.border_color = nil
 client.urgent = false
 
 --- A cairo surface for the client window content.
---- @diagnostic disable-next-line: undefined-doc-name
---- @alias raw_curface cairo.surface
---- @type raw_curface
+--- @type CAPICairoSurface
 ---## Constraints
 --- - Access: read-only
 --- - Default value: This is a live surface. Always use [gears.surface](https://awesomewm.org/apidoc/libraries/gears.surface.html) to take a snapshot.
@@ -400,7 +391,7 @@ client.modal = nil
 client.focusable = true
 
 --- The client's bounding shape as set by awesome as a (native) cairo surface.
---- @type image
+--- @type DrawableImage
 ---## Constraints
 --- - Access: read-only
 --- - Default value: An A1 surface where all pixels are white.
@@ -409,7 +400,7 @@ client.focusable = true
 client.shape_bounding = nil
 
 --- The client's clip shape as set by awesome as a (native) cairo surface.
---- @type image
+--- @type DrawableImage
 ---## Constraints
 --- - Access: read-only
 --- - Default value: An A1 surface where all pixels are white.
@@ -418,7 +409,7 @@ client.shape_bounding = nil
 client.shape_clip = nil
 
 --- The client's input shape as set by awesome as a (native) cairo surface.
---- @type image
+--- @type DrawableImage
 ---## Constraints
 --- - Access: read-only
 --- - Default value: An A1 surface where all pixels are white.
@@ -427,7 +418,7 @@ client.shape_clip = nil
 client.shape_input = nil
 
 --- The client's bounding shape as set by the program as a (native) cairo surface.
---- @type image
+--- @type DrawableImage
 ---## Constraints
 --- - Access: read-only
 --- - Default value: An A1 surface where all pixels are white
@@ -436,7 +427,7 @@ client.shape_input = nil
 client.client_shape_bounding = nil
 
 --- The client's clip shape as set by the program as a (native) cairo surface.
---- @type image
+--- @type DrawableImage
 ---## Constraints
 --- - Access: read-only
 --- - Default value: An A1 surface where all pixels are white
@@ -465,7 +456,7 @@ client.valid = true
 --- The first tag of the client.
 ---
 ---# TODO Fix type after tag.lua is typed
---- @type tag|nil
+--- @type tag | nil
 ---## Constraints
 --- - Access: read-only
 --- - Default value: `nil`

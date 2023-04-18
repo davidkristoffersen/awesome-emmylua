@@ -1,6 +1,8 @@
 --- ### Description
 --- A physical or virtual screen object.
----
+--- ### Constructors
+--- - [screen.fake_add](./functions.lua): Add a fake screen. (File link only)
+--- ### Usage
 --- Screen objects can be added and removed over time. To get a callback for all current and future screens, use `awful.screen.connect_for_each_screen`:
 ---
 --- ```lua
@@ -21,5 +23,6 @@
 ---
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/screen.html)
+--- ---
 --- @class Screen
 screen = {}

@@ -1,10 +1,10 @@
 --- ### Description
 --- The screen coordinates.
 --- The returned table contains the x, y, width and height keys.
---- @type table
+--- @type CAPIGeometry
 --- ### Constraints
 --- - Default value: Either from xrandr or from fake_resize.
---- - Table keys: x (integer), y (integer), width (integer), height (integer)
+--- - Table keys: `x` (integer), `y` (integer), `width` (integer), `height` (integer)
 --- - Unit: pixel
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/screen.html#geometry)
@@ -22,7 +22,7 @@ screen.index = 0
 
 --- ### Description
 --- The screen workarea.
---- @type table
+--- @type CAPIGeometry
 --- ### Constraints
 --- - Default value: Based on geometry with the awful.wibar and docks area substracted.
 --- - Table keys: x (integer), y (integer), width (integer), height (integer)
@@ -33,7 +33,7 @@ screen.workarea = {}
 
 --- ### Description
 --- The area where clients can be tiled.
---- @type table
+--- @type CAPIGeometry
 --- ### Constraints
 --- - Default value: This is the workarea substracted with the padding area.
 --- - Table keys: x (number), y (number), width (number), height (number)
@@ -44,7 +44,7 @@ screen.tiling_area = {}
 
 --- ### Description
 --- Take a screenshot of the physical screen.
---- @type raw_surface
+--- @type CAPICairoSurface
 --- ### Constraints
 --- - Default value: The client raw pixels at the time the property is called. If there is no compositing manager running, it might be black.
 --- ---
@@ -53,7 +53,7 @@ screen.content = nil
 
 --- ### Description
 --- The screen padding.
---- @type table or number
+--- @type ScreenPadding or number
 --- ### Constraints
 --- - Default value: 0
 --- - Type description: number (A single value for each sides) or table (A different value for each sides)
@@ -66,7 +66,7 @@ screen.padding = {}
 
 --- ### Description
 --- A list of outputs for this screen with their size in mm.
---- @type table
+--- @type ScreenOutputs
 --- ### Constraints
 --- - Default value: This may or may not be populated if the screen are based on an actual physical screen. For fake screen, this property content is undefined.
 --- - Table content: A key-value table with the output name as key and a table of metadata as value.
@@ -76,10 +76,10 @@ screen.outputs = {}
 
 --- ### Description
 --- The list of visible clients for the screen.
---- @type table
+--- @type Client[]
 --- ### Constraints
---- - Default value: {}
---- - Table content: A list of client objects.
+--- - Default value: `{}`
+--- - Table content: A list of [client](https://awesomewm.org/apidoc/core_components/core_components/client.html#) objects.
 --- - Valid values: The clients list, ordered from top to bottom.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/screen.html#clients)
@@ -87,10 +87,10 @@ screen.clients = {}
 
 --- ### Description
 --- Get the list of clients assigned to the screen but not currently visible.
---- @type table
+--- @type Client[]
 --- ### Constraints
---- - Default value: {}
---- - Table content: A list of client objects.
+--- - Default value: `{}`
+--- - Table content: A list of [client](https://awesomewm.org/apidoc/core_components/core_components/client.html#) objects.
 --- - Valid values: The clients list, ordered from top to bottom.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/screen.html#hidden_clients)
@@ -98,10 +98,10 @@ screen.hidden_clients = {}
 
 --- ### Description
 --- All clients assigned to the screen.
---- @type table
+--- @type Client[]
 --- ### Constraints
---- - Default value: {}
---- - Table content: A list of client objects.
+--- - Default value: `{}`
+--- - Table content: A list of [client](https://awesomewm.org/apidoc/core_components/core_components/client.html#) objects.
 --- - Valid values: The clients list, ordered from top to bottom.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/screen.html#all_clients)
@@ -109,10 +109,10 @@ screen.all_clients = {}
 
 --- ### Description
 --- Tiled clients for the screen.
---- @type table
+--- @type Client[]
 --- ### Constraints
---- - Default value: {}
---- - Table content: A list of client objects.
+--- - Default value: `{}`
+--- - Table content: A list of [client](https://awesomewm.org/apidoc/core_components/core_components/client.html#) objects.
 --- - Valid values: The clients list, ordered from top to bottom.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/screen.html#tiled_clients)
@@ -122,7 +122,7 @@ screen.tiled_clients = {}
 --- A list of all tags on the screen.
 --- @type table
 --- ### Constraints
---- - Default value: {}
+--- - Default value: `{}`
 --- - Table content: A table with all available tags.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/screen.html#tags)
@@ -130,9 +130,9 @@ screen.tags = {}
 
 --- ### Description
 --- A list of all selected tags on the screen.
---- @type table
+--- @type tag[]
 --- ### Constraints
---- - Default value: {}
+--- - Default value: `{}`
 --- - Table content: A table with all selected tags.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/screen.html#selected_tags)
@@ -140,9 +140,9 @@ screen.selected_tags = {}
 
 --- ### Description
 --- The first selected tag.
---- @type tag or nil
+--- @type tag | nil
 --- ### Constraints
---- - Default value: nil
+--- - Default value: `nil`
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/screen.html#selected_tag)
 screen.selected_tag = nil
@@ -151,7 +151,7 @@ screen.selected_tag = nil
 --- The number of pixels per inch of the screen.
 --- @type number
 --- ### Constraints
---- - Default value: 96
+--- - Default value: `96`
 --- - Unit: pixel_per_inch
 --- - Negative allowed: false
 --- ---
@@ -162,7 +162,7 @@ screen.dpi = 96
 --- The lowest density DPI from all of the (physical) outputs.
 --- @type number
 --- ### Constraints
---- - Default value: This is extracted from outputs.
+--- - Default value: This is extracted from `outputs`.
 --- - Unit: pixel_per_inch
 --- - Negative allowed: false
 --- ---
@@ -173,7 +173,7 @@ screen.minimum_dpi = nil
 --- The highest density DPI from all of the (physical) outputs.
 --- @type number
 --- ### Constraints
---- - Default value: This is extracted from outputs.
+--- - Default value: This is extracted from `outputs`.
 --- - Unit: pixel_per_inch
 --- - Negative allowed: false
 --- ---
@@ -184,7 +184,7 @@ screen.maximum_dpi = nil
 --- The preferred DPI from all of the (physical) outputs.
 --- @type number
 --- ### Constraints
---- - Default value: This is extracted from outputs.
+--- - Default value: This is extracted from `outputs`.
 --- - Negative allowed: false
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/screen.html#preferred_dpi)
@@ -194,7 +194,7 @@ screen.preferred_dpi = nil
 --- The maximum diagonal size in millimeters.
 --- @type number
 --- ### Constraints
---- - Default value: This is extracted from outputs.
+--- - Default value: This is extracted from `outputs`.
 --- - Unit: millimeter
 --- - Negative allowed: false
 --- ---
@@ -205,7 +205,7 @@ screen.mm_maximum_size = nil
 --- The minimum diagonal size in millimeters.
 --- @type number
 --- ### Constraints
---- - Default value: This is extracted from outputs.
+--- - Default value: This is extracted from `outputs`.
 --- - Unit: millimeter
 --- - Negative allowed: false
 --- ---
@@ -216,7 +216,7 @@ screen.mm_minimum_size = nil
 --- The maximum diagonal size in inches.
 --- @type number
 --- ### Constraints
---- - Default value: This is extracted from outputs.
+--- - Default value: This is extracted from `outputs`.
 --- - Unit: inch
 --- - Negative allowed: false
 --- ---
@@ -227,7 +227,7 @@ screen.inch_maximum_size = nil
 --- The minimum diagonal size in inches.
 --- @type number
 --- ### Constraints
---- - Default value: This is extracted from outputs.
+--- - Default value: This is extracted from `outputs`.
 --- - Unit: inch
 --- - Negative allowed: false
 --- ---

@@ -1,7 +1,28 @@
 --- @diagnostic disable: missing-return, unused-local, duplicate-set-field
 
---- @class Screen
-local screen = {}
+--- ### Description (Constructor)
+--- Add a fake screen.
+--- ### Parameters
+--- @param x integer X-coordinate for screen.
+--- @param y integer Y-coordinate for screen.
+--- @param width integer Width for screen.
+--- @param height integer Height for screen.
+--- ### Returns
+--- @return Screen screen The new screen.
+--- ### Usage
+--- To vertically split the first screen in 2 equal parts, use:
+--- ```lua
+--- local geo = screen[1].geometry
+--- local new_width = math.ceil(geo.width/2)
+--- local new_width2 = geo.width - new_width
+--- screen[1]:fake_resize(geo.x, geo.y, new_width, geo.height)
+--- screen.fake_add(geo.x + new_width, geo.y, new_width2, geo.height)
+--- ```
+--- Both virtual screens will have their own taglist and wibars.
+---
+--- ---
+--- [**View doc**](https://awesomewm.org/apidoc/core_components/screen.html#fake_add)
+function screen.fake_add(x, y, width, height) end
 
 --- ### Description
 --- Get the number of instances.

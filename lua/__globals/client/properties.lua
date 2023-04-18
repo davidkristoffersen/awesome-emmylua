@@ -455,8 +455,7 @@ client.valid = true
 
 --- The first tag of the client.
 ---
----# TODO Fix type after tag.lua is typed
---- @type tag | nil
+--- @type Tag | nil
 ---## Constraints
 --- - Access: read-only
 --- - Default value: `nil`

@@ -130,7 +130,7 @@ screen.tags = {}
 
 --- ### Description
 --- A list of all selected tags on the screen.
---- @type tag[]
+--- @type Tag[]
 --- ### Constraints
 --- - Default value: `{}`
 --- - Table content: A table with all selected tags.
@@ -140,7 +140,7 @@ screen.selected_tags = {}
 
 --- ### Description
 --- The first selected tag.
---- @type tag | nil
+--- @type Tag | nil
 --- ### Constraints
 --- - Default value: `nil`
 --- ---

@@ -1,0 +1,43 @@
+--- ### Description
+--- Labelled container where [client](https://awesomewm.org/apidoc/core_components/client.html) objects can be stored.
+---
+--- In AwesomeWM, a [tag](https://awesomewm.org/apidoc/core_components/tag.html) is a group of clients. It can either be used as labels or as more classical workspaces depending on how they are configured.
+---
+--- - A __tag__ can be attached to __multiple clients__
+--- - A __client__ can be attached to __multiple tags__
+--- - A __tag__ can only be in 1 screen at _any given time_, but can be moved
+--- - All __clients__ attached to a tag __must be in the same screen as the tag__.
+--- ### Usage
+--- Default config:
+--- ```lua
+--- awful.tag(
+---   { '1', '2', '3', '4', '5', '6', '7', '8', '9' },
+---   s,
+---   awful.layout.layouts[1]
+--- )
+--- ```
+--- Tags with different properties:
+--- ```lua
+--- awful.tag.add('First tag', {
+---   icon = '/path/to/icon1.png',
+---   layout = awful.layout.suit.tile,
+---   master_fill_policy = 'master_width_factor',
+---   gap_single_client = true,
+---   gap = 15,
+---   screen = s,
+---   selected = true,
+--- })
+---
+--- awful.tag.add('Second tag', {
+---   icon = '/path/to/icon2.png',
+---   layout = awful.layout.suit.max,
+---   screen = s,
+--- })
+--- ```
+--- ### Constructors
+--- - [awful.tag.new](https://awesomewm.org/apidoc/core_components/tag.html#awful.tag.add): Create a new tag.
+--- - [awful.tag.add](https://awesomewm.org/apidoc/core_components/tag.html#awful.tag.new): Add a new tag to the screen.
+--- ---
+--- [**View doc**](https://awesomewm.org/apidoc/core_components/tag.html)
+--- @class Tag
+tag = {}

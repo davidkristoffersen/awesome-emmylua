@@ -127,13 +127,13 @@ function client:to_secondary_section() end
 function client:relative_move(x, y, w, h) end
 
 --- Move a client to a tag.
---- @param target tag The tag to move the client to.
+--- @param target Tag The tag to move the client to.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#move_to_tag)
 function client:move_to_tag(target) end
 
 --- Toggle a tag on a client.
---- @param target tag The tag to move the client to.
+--- @param target Tag The tag to move the client to.
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#toggle_tag)
 function client:toggle_tag(target) end

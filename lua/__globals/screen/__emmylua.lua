@@ -38,7 +38,7 @@
 --- @field honor_padding boolean Whether to honor the screen's padding.
 --- @field honor_workarea boolean Whether to honor the screen's workarea.
 --- @field margins number|table Apply some margins on the output. This can either be a number or a table with left, right, top and bottom keys.
---- @field tag tag Use this tag's screen.
+--- @field tag Tag Use this tag's screen.
 --- @field parent Drawable A parent drawable to use as base geometry.
 --- @field bounding_rect table A bounding rectangle. This parameter is incompatible with honor_workarea.
 

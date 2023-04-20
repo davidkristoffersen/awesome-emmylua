@@ -1,4 +1,4 @@
---- @diagnostic disable: missing-return
+--- @diagnostic disable: missing-return, unused-local
 
 --- Return client struts (reserved space at the edge of the screen).
 --- @param struts CAPIStrut A table with new strut values, or none.
@@ -138,8 +138,23 @@ function client:move_to_tag(target) end
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#toggle_tag)
 function client:toggle_tag(target) end
 
+--- ### Description
 --- Move a client to a screen. Default is next screen, cycling.
---- @param s Screen|nil The screen, default to current + 1.
+--- ### Parameters
+--- @param s Screen | integer? The screen, default to current + 1.
+--- ### Usage
+--- Move to next screen:
+--- ```lua
+--- c:move_to_screen()
+--- ```
+--- Move to previous screen:
+--- ```lua
+--- c:move_to_screen(c.screen.index - 1)
+--- ```
+--- Move to screen object:
+--- ```lua
+--- c:move_to_screen(s)
+--- ```
 --- ---
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#move_to_screen)
 function client:move_to_screen(s) end

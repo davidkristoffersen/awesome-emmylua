@@ -49,7 +49,7 @@ local GShape = lib
 --- Add a squircle shape with only some of the corner are "circled" to the current path. The squircle is not exactly as the definition.
 --- It will expand to the shape's width and height, kinda like an ellipse.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param top_left boolean If the top left corner is rounded.
@@ -71,7 +71,7 @@ function GShape.partial_squircle(cairo, width, height, top_left, top_right, bott
 --- ### Description
 --- Add a squircle shape to the current path. This will behave the same as [`partial_squircle`](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#partial_squircle).
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param rate number The "squareness" of the squircle, should be greater than 1.
@@ -89,7 +89,7 @@ function GShape.squircle(cairo, width, height, rate, delta) end
 --- ### Description
 --- Add a star shape to the current path. The star size will be the minimum of the given width and weight.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param number? integer Number of grams. It is 5 by default.
@@ -106,7 +106,7 @@ function GShape.star(cairo, width, height, number) end
 --- ### Description
 --- Add a rounded rectangle to the current path. Note: If the radius is bigger than either half side, it will be reduced.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param radius number The corner radius.
@@ -123,7 +123,7 @@ function GShape.rounded_rect(cairo, width, height, radius) end
 --- ### Description
 --- Add a rectangle delimited by 2 180 degree arcs to the path.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- ### Usage
@@ -139,7 +139,7 @@ function GShape.rounded_bar(cairo, width, height) end
 --- ### Description
 --- A rounded rect with only some of the corners rounded.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param top_left boolean If the top left corner is rounded.
@@ -160,7 +160,7 @@ function GShape.partially_rounded_rect(cairo, width, height, top_left, top_right
 --- ### Description
 --- A rounded rectangle with a triangle at the top.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param corner_radius? number The corner radius. It is 5 by default.
@@ -179,7 +179,7 @@ function GShape.infobubble(cairo, width, height, corner_radius, arrow_size, arro
 --- ### Description
 --- A rectangle terminated by an arrow.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param arrow_length? number The length of the arrow part. It is `height / 2` by default.
@@ -196,7 +196,7 @@ function GShape.rectangular_tag(cairo, width, height, arrow_length) end
 --- ### Description
 --- A simple arrow shape.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param head_width? number The width of the head of the arrow. It is `head_width` by default.
@@ -215,7 +215,7 @@ function GShape.arrow(cairo, width, height, head_width, shaft_width, shaft_lengt
 --- ### Description
 --- A squeezed hexagon filling the rectangle.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- ### Usage
@@ -228,11 +228,11 @@ function GShape.arrow(cairo, width, height, head_width, shaft_width, shaft_lengt
 --- [View documents](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#hexagon)
 function GShape.hexagon(cairo, width, height) end
 
---- @type ShapeFn
+--- @type GearsShapeFn
 --- ### Description
 --- Double arrow popularized by the `vim-powerline` module.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param arrow_depth? number The width of the arrow part of the shape. It is `height / 2` by default.
@@ -249,7 +249,7 @@ function GShape.powerline(cairo, width, height, arrow_depth) end
 --- ### Description
 --- An isosceles triangle.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- ### Usage
@@ -265,7 +265,7 @@ function GShape.isosceles_triangle(cairo, width, height) end
 --- ### Description
 --- A cross (+) symbol.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param thickness? number The cross section thickness. It is `width / 3` by default.
@@ -282,7 +282,7 @@ function GShape.cross(cairo, width, height, thickness) end
 --- ### Description
 --- A similar shape to the [`rounded_rect`](https://awesomewm.org/apidoc/theme_related_libraries/gears.shape.html#rounded_rect), but with sharp corners.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param corner_radius number Undocumented!
@@ -299,7 +299,7 @@ function GShape.octogon(cairo, width, height, corner_radius) end
 --- ### Description
 --- A circle shape.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param radius? number The radius.
@@ -316,7 +316,7 @@ function GShape.circle(cairo, width, height, radius) end
 --- ### Description
 --- A simple rectangle.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- ### Usage
@@ -332,7 +332,7 @@ function GShape.rectangle(cairo, width, height) end
 --- ### Description
 --- A diagonal parallelogram with the bottom left corner at `x = 0` and top right at `x = width`.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 ---@param width number The shape width.
 ---@param height number The shape height.
 ---@param base_width? number The parallelogram base width. It is `width / 3` by default.
@@ -349,7 +349,7 @@ function GShape.parallelogram(cairo, width, height, base_width) end
 --- ### Description
 --- A losange
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- ### Usage
@@ -367,7 +367,7 @@ function GShape.losange(cairo, width, height) end
 ---
 --- The pie center is the center of the area.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 ---@param width number The shape width.
 ---@param height number The shape height.
 ---@param start_angle? number The start angle (in radians). It is 0 by default.
@@ -386,7 +386,7 @@ function GShape.pie(cairo, width, height, start_angle, end_angle, radius) end
 --- ### Description
 --- A rounded arc.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param thickness? number The arc thichness.
@@ -409,7 +409,7 @@ function GShape.arc(cairo, width, height, thickness, start_angle, end_angle, sta
 ---
 --- Note that this shape is not closed and thus filling it doesn't make much sense.
 --- ### Parameters
---- @param cairo any A cairo context.
+--- @param cairo CAPICairoContext A cairo context.
 --- @param width number The shape width.
 --- @param height number The shape height.
 --- @param percent number The progressbar percent.
@@ -428,7 +428,7 @@ function GShape.radial_progress(cairo, width, height, percent, hide_left) end
 --- Adjust the shape using a transformation object.
 --- Apply various transformations to the shape.
 --- ### Parameters
---- @param shape ShapeFn A shape function.
+--- @param shape GearsShapeFn A shape function.
 --- ### Returns
 --- @return function handle A transformation handle, also act as a shape function
 --- ### Usage

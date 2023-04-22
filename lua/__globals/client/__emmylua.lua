@@ -14,3 +14,117 @@
 --- @field toggle_minimization boolean
 
 --#endregion
+
+--#region Client properties
+
+--- @class ClientSizeHints
+--- @field user_position table|nil A table with `x` and `y` keys. It contains the preferred position of the client. This is set when the position has been modified by the user. See `program_position`
+--- @field program_position table|nil A table with `x` and `y` keys. It contains the preferred position of the client. This is set when the position has been modified by the program. See `user_position`
+--- @field user_size table|nil A table with `width` and `height` keys. It contains the preferred size of the client. This is set when the size has been modified by the user. See `program_size`
+--- @field program_size table|nil A table with `width` and `height`. This contains the preferred size as specified by the application.
+--- @field max_width integer|nil The maximum width (in pixels).
+--- @field max_height integer|nil The maximum height (in pixels).
+--- @field min_width integer|nil The minimum width (in pixels).
+--- @field min_height integer|nil The minimum height (in pixels).
+--- @field width_inc integer|nil The number of pixels by which the client width may be increased or decreased. For example, for terminals, the size has to be proportional with the monospace font size
+--- @field height_inc integer|nil The number of pixels by which the client height may be increased or decreased. For example, for terminals, the size has to be proportional with the monospace font size
+--- @field win_gravity string|nil The client `gravity` defines the corder from which the size is computed. For most clients, it is `north_west`, which corresponds to the top-left of the window. This will affect how the client is resized and other size related operations.
+--- @field min_aspect_num integer|nil
+--- @field min_aspect_den integer|nil
+--- @field max_aspect_num integer|nil
+--- @field max_aspect_den integer|nil
+--- @field base_width integer|nil
+--- @field base_height integer|nil
+
+--- @class ClientMotifWMHintsFuncs
+--- @field all boolean
+--- @field resize boolean
+--- @field move boolean
+--- @field minimize boolean
+--- @field maximize boolean
+--- @field close boolean
+
+--- @class ClientMotifWMHintsDecs
+--- @field all boolean
+--- @field border boolean
+--- @field resizeh boolean
+--- @field title boolean
+--- @field menu boolean
+--- @field minimize boolean
+--- @field maximize boolean
+
+--- @class ClientMotifWMHints
+--- @field functions ClientMotifWMHintsFuncs
+--- @field decorations ClientMotifWMHintsDecs
+--- @field input_mode string This is either `modeless`, `primary_application_modal`, `system_modal`, `full_application_modal` or `unknown`.
+--- @field status table A table with the following keys:
+--- @field status.tearoff_window boolean
+
+--#endregion
+
+--#region Client properties API
+
+--- ### Description
+--- This table contains all the default properties for a client.
+--- @class ClientProperies
+--- @field window ClientPropertyWindow
+--- @field name ClientPropertyName
+--- @field skip_taskbar ClientPropertySkipTaskbar
+--- @field type ClientPropertyType
+--- @field class ClientPropertyClass
+--- @field instance ClientPropertyInstance
+--- @field pid ClientPropertyPid
+--- @field role ClientPropertyRole
+--- @field machine ClientPropertyMachine
+--- @field icon_name ClientPropertyIconName
+--- @field icon ClientPropertyIcon
+--- @field icon_sizes ClientPropertyIconSizes
+--- @field screen ClientPropertyScreen
+--- @field hidden ClientPropertyHidden
+--- @field minimized ClientPropertyMinimized
+--- @field size_hints_honor ClientPropertySizeHintsHonor
+--- @field border_width ClientPropertyBorderWidth
+--- @field border_color ClientPropertyBorderColor
+--- @field urgent ClientPropertyUrgent
+--- @field content ClientPropertyContent
+--- @field opacity ClientPropertyOpacity
+--- @field ontop ClientPropertyOnTop
+--- @field above ClientPropertyAbove
+--- @field below ClientPropertyBelow
+--- @field fullscreen ClientPropertyFullscreen
+--- @field maximized ClientPropertyMaximized
+--- @field maximized_horizontal ClientPropertyMaximizedHorizontal
+--- @field maximized_vertical ClientPropertyMaximizedVertical
+--- @field transient_for ClientPropertyTransientFor
+--- @field group_window ClientPropertyGroupWindow
+--- @field leader_window ClientPropertyLeaderWindow
+--- @field size_hints ClientPropertySizeHints
+--- @field motif_wm_hints ClientPropertyMotifWMHints
+--- @field sticky ClientPropertySticky
+--- @field modal ClientPropertyModal
+--- @field focusable ClientPropertyFocusable
+--- @field shape_bounding ClientPropertyShapeBounding
+--- @field shape_clip ClientPropertyShapeClip
+--- @field shape_input ClientPropertyShapeInput
+--- @field client_shape_bounding ClientPropertyClientShapeBounding
+--- @field client_shape_clip ClientPropertyClientShapeClip
+--- @field startup_id ClientPropertyStartupId
+--- @field valid ClientPropertyValid
+--- @field first_tag ClientPropertyFirstTag
+--- @field buttons ClientPropertyButtons
+--- @field keys ClientPropertyKeys
+--- @field marked ClientPropertyMarked
+--- @field is_fixed ClientPropertyIsFixed
+--- @field immobilized_horizontal ClientPropertyImmobilizedHorizontal
+--- @field immobilized_vertical ClientPropertyImmobilizedVertical
+--- @field floating ClientPropertyFloating
+--- @field x ClientPropertyX
+--- @field y ClientPropertyY
+--- @field width ClientPropertyWidth
+--- @field height ClientPropertyHeight
+--- @field dockable ClientPropertyDockable
+--- @field requests_no_titlebar ClientPropertyRequestsNoTitlebar
+--- @field shape ClientPropertyShape
+--- @field active ClientPropertyActive
+
+--#endregion

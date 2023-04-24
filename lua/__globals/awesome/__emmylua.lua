@@ -20,7 +20,7 @@
 --- | "spawn::canceled" # For some reason the application aborted startup.
 --- | "spawn::change" #  When one of the fields from the `spawn::initiated` table changes.
 --- | "spawn::completed" # An application finished starting.
---- | "spawn::initated" # When a new client is beginning to start.
+--- | "spawn::initiated" # When a new client is beginning to start.
 --- | "spawn::timeout" # An application started a spawn event but didn't start in time.
 
 --#endregion

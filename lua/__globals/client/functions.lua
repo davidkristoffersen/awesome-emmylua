@@ -10,12 +10,14 @@
 --- [**View doc**](https://awesomewm.org/apidoc/core_components/client.html#instances)
 function client.instances() end
 
+--- ### Description
 --- Get all clients into a table.
----
+--- ### Parameters
 --- @param screen integer|Screen?: A screen number to filter clients on (optional).
 --- @param stacked boolean?: Return clients in stacking order? (ordered from top to bottom) (optional).
+--- ### Returns
 --- @return table: A table with clients.
---- ## Usage
+--- ### Usage
 --- ```lua
 --- for _, c in ipairs(client.get()) do
 ---     -- do something

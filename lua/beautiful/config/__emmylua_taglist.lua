@@ -1,0 +1,54 @@
+--- ### Description
+--- This file contains the EmmyLua based annotations for the `beautiful` theme general config, you should not use `require` in this file.
+--- @module "beautiful"
+
+--#region Beautiful taglist config
+
+--- ### Description
+--- Taglist theming settings for AwesomeWM.
+--- @class BeautifulConfigTaglist: table
+--- @field taglist_font string The font used for taglist items.
+--- @field taglist_bg_normal string The normal background color for taglist items.
+--- @field taglist_fg_normal string The normal foreground (text) color for taglist items.
+--- @field taglist_bg_focus string The focused background color for taglist items.
+--- @field taglist_fg_focus string The focused foreground (text) color for taglist items.
+--- @field taglist_bg_urgent string The urgent background color for taglist items.
+--- @field taglist_fg_urgent string The urgent foreground (text) color for taglist items.
+--- @field taglist_bg_occupied string The occupied background color for taglist items.
+--- @field taglist_fg_occupied string The occupied foreground (text) color for taglist items.
+--- @field taglist_bg_empty string The empty background color for taglist items.
+--- @field taglist_fg_empty string The empty foreground (text) color for taglist items.
+--- @field taglist_bg_volatile string The volatile background color for taglist items.
+--- @field taglist_fg_volatile string The volatile foreground (text) color for taglist items.
+--- @field taglist_shape function A function that returns a shape for the taglist items.
+--- @field taglist_shape_border_width number The width of the shape border for taglist items.
+--- @field taglist_shape_border_color string The color of the shape border for taglist items.
+--- @field taglist_disable_icon boolean Disable the display of icons in the taglist.
+--- @field taglist_squares_sel string Path to an image file for the selected tag square.
+--- @field taglist_squares_unsel string Path to an image file for the unselected tag square.
+
+--- ### Description
+--- Taglist part theming settings for AwesomeWM.
+--- Part version that strips the `taglist_` prefix from the fields.
+--- @class BeautifulConfigTaglistPart: BeautifulConfigPartMeta
+--- @field font string The font used for taglist items.
+--- @field bg_normal string The normal background color for taglist items.
+--- @field fg_normal string The normal foreground (text) color for taglist items.
+--- @field bg_focus string The focused background color for taglist items.
+--- @field fg_focus string The focused foreground (text) color for taglist items.
+--- @field bg_urgent string The urgent background color for taglist items.
+--- @field fg_urgent string The urgent foreground (text) color for taglist items.
+--- @field bg_occupied string The occupied background color for taglist items.
+--- @field fg_occupied string The occupied foreground (text) color for taglist items.
+--- @field bg_empty string The empty background color for taglist items.
+--- @field fg_empty string The empty foreground (text) color for taglist items.
+--- @field bg_volatile string The volatile background color for taglist items.
+--- @field fg_volatile string The volatile foreground (text) color for taglist items.
+--- @field shape function A function that returns a shape for the taglist items.
+--- @field shape_border_width number The width of the shape border for taglist items.
+--- @field shape_border_color string The color of the shape border for taglist items.
+--- @field disable_icon boolean Disable the display of icons in the taglist.
+--- @field squares_sel string Path to an image file for the selected tag square.
+--- @field squares_unsel string Path to an image file for the unselected tag square.
+
+--#endregion

@@ -1,0 +1,48 @@
+--- ### Description
+--- This file contains the EmmyLua based annotations for the `beautiful` theme general config, you should not use `require` in this file.
+--- @module "beautiful"
+
+--#region Beautiful titlebar config
+
+--- ### Description
+--- Titlebar theming settings for AwesomeWM.
+--- @class BeautifulConfigTitlebar: table
+--- @field titlebar_bg_normal string The normal background color for the titlebar.
+--- @field titlebar_fg_normal string The normal foreground (text) color for the titlebar.
+--- @field titlebar_bg_focus string The focused background color for the titlebar.
+--- @field titlebar_fg_focus string The focused foreground (text) color for the titlebar.
+--- @field titlebar_floating_button_normal string The normal color of the floating button on the titlebar.
+--- @field titlebar_floating_button_focus string The focused color of the floating button on the titlebar.
+--- @field titlebar_maximized_button_normal string The normal color of the maximized button on the titlebar.
+--- @field titlebar_maximized_button_focus string The focused color of the maximized button on the titlebar.
+--- @field titlebar_minimize_button_normal string The normal color of the minimize button on the titlebar.
+--- @field titlebar_minimize_button_focus string The focused color of the minimize button on the titlebar.
+--- @field titlebar_ontop_button_normal string The normal color of the on-top button on the titlebar.
+--- @field titlebar_ontop_button_focus string The focused color of the on-top button on the titlebar.
+--- @field titlebar_sticky_button_normal string The normal color of the sticky button on the titlebar.
+--- @field titlebar_sticky_button_focus string The focused color of the sticky button on the titlebar.
+--- @field titlebar_close_button_normal string The normal color of the close button on the titlebar.
+--- @field titlebar_close_button_focus string The focused color of the close button on the titlebar.
+
+--- ### Description
+--- Titlebar part theming settings for AwesomeWM.
+--- Part version that strips the `titlebar_` prefix from the fields.
+--- @class BeautifulConfigTitlebarPart: BeautifulConfigPartMeta
+--- @field bg_normal string The normal background color for the titlebar.
+--- @field fg_normal string The normal foreground (text) color for the titlebar.
+--- @field bg_focus string The focused background color for the titlebar.
+--- @field fg_focus string The focused foreground (text) color for the titlebar.
+--- @field floating_button_normal string The normal color of the floating button on the titlebar.
+--- @field floating_button_focus string The focused color of the floating button on the titlebar.
+--- @field maximized_button_normal string The normal color of the maximized button on the titlebar.
+--- @field maximized_button_focus string The focused color of the maximized button on the titlebar.
+--- @field minimize_button_normal string The normal color of the minimize button on the titlebar.
+--- @field minimize_button_focus string The focused color of the minimize button on the titlebar.
+--- @field ontop_button_normal string The normal color of the on-top button on the titlebar.
+--- @field ontop_button_focus string The focused color of the on-top button on the titlebar.
+--- @field sticky_button_normal string The normal color of the sticky button on the titlebar.
+--- @field sticky_button_focus string The focused color of the sticky button on the titlebar.
+--- @field close_button_normal string The normal color of the close button on the titlebar.
+--- @field close_button_focus string The focused color of the close button on the titlebar.
+
+--#endregion

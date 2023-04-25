@@ -1,0 +1,44 @@
+--- ### Description
+--- This file contains the EmmyLua based annotations for the `beautiful` theme general config, you should not use `require` in this file.
+--- @module "beautiful"
+
+--#region Beautiful tasklist config
+
+--- ### Description
+--- Tasklist theming settings for AwesomeWM.
+--- @class BeautifulConfigTasklist: table
+--- @field tasklist_font string The font used for tasklist items.
+--- @field tasklist_bg_normal string The normal background color for tasklist items.
+--- @field tasklist_fg_normal string The normal foreground (text) color for tasklist items.
+--- @field tasklist_bg_focus string The focused background color for tasklist items.
+--- @field tasklist_fg_focus string The focused foreground (text) color for tasklist items.
+--- @field tasklist_bg_urgent string The urgent background color for tasklist items.
+--- @field tasklist_fg_urgent string The urgent foreground (text) color for tasklist items.
+--- @field tasklist_disable_icon boolean Disable the display of icons in the tasklist.
+--- @field tasklist_disable_task_name boolean Disable the display of task names in the tasklist.
+--- @field tasklist_plain_task_name boolean Display plain task names without any formatting.
+--- @field tasklist_spacing number The spacing between tasklist items.
+--- @field tasklist_shape function A function that returns a shape for the tasklist items.
+--- @field tasklist_shape_border_width number The width of the shape border for tasklist items.
+--- @field tasklist_shape_border_color string The color of the shape border for tasklist items.
+
+--- ### Description
+--- Tasklist part theming settings for AwesomeWM.
+--- Part version that strips the `tasklist_` prefix from the fields.
+--- @class BeautifulConfigTasklistPart: BeautifulConfigPartMeta
+--- @field font string The font used for tasklist items.
+--- @field bg_normal string The normal background color for tasklist items.
+--- @field fg_normal string The normal foreground (text) color for tasklist items.
+--- @field bg_focus string The focused background color for tasklist items.
+--- @field fg_focus string The focused foreground (text) color for tasklist items.
+--- @field bg_urgent string The urgent background color for tasklist items.
+--- @field fg_urgent string The urgent foreground (text) color for tasklist items.
+--- @field disable_icon boolean Disable the display of icons in the tasklist.
+--- @field disable_task_name boolean Disable the display of task names in the tasklist.
+--- @field plain_task_name boolean Display plain task names without any formatting.
+--- @field spacing number The spacing between tasklist items.
+--- @field shape function A function that returns a shape for the tasklist items.
+--- @field shape_border_width number The width of the shape border for tasklist items.
+--- @field shape_border_color string The color of the shape border for tasklist items.
+
+--#endregion

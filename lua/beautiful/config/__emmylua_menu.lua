@@ -1,0 +1,42 @@
+--- ### Description
+--- This file contains the EmmyLua based annotations for the `beautiful` theme general config, you should not use `require` in this file.
+--- @module "beautiful"
+
+--#region Beautiful menu config
+
+--- ### Description
+--- Menu theming settings for AwesomeWM.
+--- @class BeautifulConfigMenu: table
+--- @field menu_font string The font used for menu items.
+--- @field menu_bg_normal string The normal background color for menu items.
+--- @field menu_fg_normal string The normal foreground (text) color for menu items.
+--- @field menu_bg_focus string The focused background color for menu items.
+--- @field menu_fg_focus string The focused foreground (text) color for menu items.
+--- @field menu_height number The height of menu items.
+--- @field menu_width number The width of menu items.
+--- @field menu_border_color string The border color of the menu.
+--- @field menu_border_width number The width of the menu border.
+--- @field menu_opacity number The opacity of the menu (0 to 1).
+--- @field menu_shape function A function that returns a shape for the menu.
+--- @field menu_submenu_icon string The path to the submenu icon.
+--- @field menu_submenu_arrow string The path to the submenu arrow icon.
+
+--- ### Description
+--- Menu part theming settings for AwesomeWM.
+--- Part version that strips the `menu_` prefix from the fields.
+--- @class BeautifulConfigMenuPart: BeautifulConfigPartMeta
+--- @field font string The font used for menu items.
+--- @field bg_normal string The normal background color for menu items.
+--- @field fg_normal string The normal foreground (text) color for menu items.
+--- @field bg_focus string The focused background color for menu items.
+--- @field fg_focus string The focused foreground (text) color for menu items.
+--- @field height number The height of menu items.
+--- @field width number The width of menu items.
+--- @field border_color string The border color of the menu.
+--- @field border_width number The width of the menu border.
+--- @field opacity number The opacity of the menu (0 to 1).
+--- @field shape function A function that returns a shape for the menu.
+--- @field submenu_icon string The path to the submenu icon.
+--- @field submenu_arrow string The path to the submenu arrow icon.
+
+--#endregion

@@ -1,0 +1,48 @@
+--- ### Description
+--- This file contains the EmmyLua based annotations for the `beautiful` theme general config, you should not use `require` in this file.
+--- @module "beautiful"
+
+--#region Beautiful layout config
+
+--- ### Description
+--- Layout icons theming settings for AwesomeWM.
+--- @class BeautifulConfigLayout: table
+--- @field layout_fairh string Path to the icon for the fair horizontal layout.
+--- @field layout_fairv string Path to the icon for the fair vertical layout.
+--- @field layout_floating string Path to the icon for the floating layout.
+--- @field layout_magnifier string Path to the icon for the magnifier layout.
+--- @field layout_max string Path to the icon for the max layout.
+--- @field layout_fullscreen string Path to the icon for the fullscreen layout.
+--- @field layout_tilebottom string Path to the icon for the tile bottom layout.
+--- @field layout_tileleft string Path to the icon for the tile left layout.
+--- @field layout_tile string Path to the icon for the tile layout.
+--- @field layout_tiletop string Path to the icon for the tile top layout.
+--- @field layout_spiral string Path to the icon for the spiral layout.
+--- @field layout_dwindle string Path to the icon for the dwindle layout.
+--- @field layout_cornernw string Path to the icon for the corner northwest layout.
+--- @field layout_cornerne string Path to the icon for the corner northeast layout.
+--- @field layout_cornersw string Path to the icon for the corner southwest layout.
+--- @field layout_cornerse string Path to the icon for the corner southeast layout.
+
+--- ### Description
+--- Layout part icons theming settings for AwesomeWM.
+--- Part version that strips the `layout_` prefix from the fields.
+--- @class BeautifulConfigLayoutPart: BeautifulConfigPartMeta
+--- @field fairh string Path to the icon for the fair horizontal layout.
+--- @field fairv string Path to the icon for the fair vertical layout.
+--- @field floating string Path to the icon for the floating layout.
+--- @field magnifier string Path to the icon for the magnifier layout.
+--- @field max string Path to the icon for the max layout.
+--- @field fullscreen string Path to the icon for the fullscreen layout.
+--- @field tilebottom string Path to the icon for the tile bottom layout.
+--- @field tileleft string Path to the icon for the tile left layout.
+--- @field tile string Path to the icon for the tile layout.
+--- @field tiletop string Path to the icon for the tile top layout.
+--- @field spiral string Path to the icon for the spiral layout.
+--- @field dwindle string Path to the icon for the dwindle layout.
+--- @field cornernw string Path to the icon for the corner northwest layout.
+--- @field cornerne string Path to the icon for the corner northeast layout.
+--- @field cornersw string Path to the icon for the corner southwest layout.
+--- @field cornerse string Path to the icon for the corner southeast layout.
+
+--#endregion

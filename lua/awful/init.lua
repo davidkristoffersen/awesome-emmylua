@@ -26,6 +26,7 @@ local lib
 local A = lib
 
 A.key = require('awful.key.init')
+A.screen = require('awful.screen')
 A.widget.launcher = require('awful.widget.launcher')
 
 return A

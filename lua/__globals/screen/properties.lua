@@ -120,7 +120,7 @@ screen.tiled_clients = {}
 
 --- ### Description
 --- A list of all tags on the screen.
---- @type table
+--- @type Tag[]
 --- ### Constraints
 --- - Default value: `{}`
 --- - Table content: A table with all available tags.
